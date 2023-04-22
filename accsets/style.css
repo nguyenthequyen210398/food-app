@@ -83,3 +83,33 @@ body {
     border-top-right-radius:10px ;
 
 }
+
+.carts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 100px;
+
+}
+
+.carts-container .carts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: bisque;
+    
+}
+.carts-container .carts img {
+    width: 50px;
+    
+}
+
+.carts-container  .total {
+    text-align: end;
+    padding-right: 10px;
+    color: red;
+    font-size: 20px;
+
+    font-weight: bold;
+    
+}

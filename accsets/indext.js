@@ -73,27 +73,13 @@ let listProduct = [
    },
 ];
 
-let arr = [];
-for (let i = 0; i < listProduct.length; i++) {
+let listCart = [];
 
-   arr.push(
-       `
-       <div class="product">
-           <div>
-               <img src=${listProduct[i].urlImage} alt="">
-           </div>
-           <div>${listProduct[i].name}</div>
-       </div>
-       `
-   );
-   
-   
-}
+
+
 const handleHome = () => {
-   const header = document.getElementById("header");
-   header.innerHTML = "Trang chủ";
-   console.dir(header);
-
+   Header("Trang chủ");
+   
    const home = document.getElementsByClassName("home")[0];
    home.classList.add("active");
 
@@ -105,16 +91,21 @@ const handleHome = () => {
    account.classList.remove("active");
 
    const products = document.getElementById("products");
-   products.innerHTML = arr.join("");
-   
-   
+   products.innerHTML = Products(listProduct);
 
 }
 
+const addProduct = (id) => {
+    console.log(id);
+    const product = listProduct.find((item) => item.id === id);
+    console.log(product);
+    listCart.push(product)
+}
+
+
+
 const handleCart = () => {
-   const header = document.getElementById("header");
-   header.innerHTML = "Giỏ hàng";
-   console.dir(header);
+    Header("Giỏ hàng");
 
    const cart = document.getElementsByClassName("cart")[0];
    cart.classList.add("active");
@@ -128,13 +119,16 @@ const handleCart = () => {
 
    const products = document.getElementById("products");
    products.innerHTML = "";
+
+   const carts = document.getElementById("carts");
+   carts.innerHTML = Cart(listCart);
+
+   
    
 }
 
 const handMessenger = () => {
-   const header = document.getElementById("header");
-   header.innerHTML = "Tin nhắn";
-   console.dir(header);
+    Header("Tin nhắn");
 
    const messenger = document.getElementsByClassName("messenger")[0];
    messenger.classList.add("active");
@@ -152,9 +146,7 @@ const handMessenger = () => {
 }
 
 const handleAccount = () => {
-   const header = document.getElementById("header");
-   header.innerHTML = "Tài khoản";
-   console.dir(header);
+    Header("Tài khoản");
 
    const account = document.getElementsByClassName("account")[0];
    account.classList.add("active");
