@@ -93,6 +93,9 @@ const handleHome = () => {
    const products = document.getElementById("products");
    products.innerHTML = Products(listProduct);
 
+   const carts = document.getElementById("carts");
+   carts.innerHTML = "";
+
 }
 
 const addProduct = (id) => {
@@ -142,6 +145,9 @@ const handMessenger = () => {
 
    const products = document.getElementById("products");
    products.innerHTML = "";
+   const carts = document.getElementById("carts");
+   carts.innerHTML = "";
+
    
 }
 
@@ -160,6 +166,9 @@ const handleAccount = () => {
 
    const products = document.getElementById("products");
    products.innerHTML = "";
+   const carts = document.getElementById("carts");
+   carts.innerHTML = "";
+
    
 }
 

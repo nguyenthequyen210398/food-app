@@ -13,6 +13,6 @@ const Cart = (cs) => {
         </div>
             `
             )
-        }).join("") + ` <div class="total">Tổng:${total}</div>`
+        }).join("") + ` <div class="total">Tổng: ${total}.000đ</div>`
     );
 };
